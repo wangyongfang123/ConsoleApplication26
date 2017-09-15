@@ -14,7 +14,6 @@ typedef struct _Node
 	double balance;
 	char password[256];
 	struct _Node* next;
-	//struct _Node*prev;
 }Node, *NodePtr;
 
 bool isEmpty(NodePtr list);
@@ -31,4 +30,5 @@ char AdminenterChoice(void);
 int _Login(NodePtr *ppNode);
 int  Setting(NodePtr *ppNode, const char*password);
 void readFile(NodePtr* list);
+
 #endif
