@@ -88,8 +88,12 @@ int insertData(NodePtr *ppNode, const char* name, const char* address, int  acct
 	{
 		Node* pNewNode = (Node*)malloc(sizeof(Node));
 		memset(pNewNode, 0, sizeof(Node));
-		pNewNode->next = pCurNode->next;
+		while (pCurNode->next != 0)
+		{
+			pCurNode = pCurNode->next;
+		}
 		pCurNode->next = pNewNode;
+		pNewNode->next = 0;
 		pCurNode = pNewNode;
 	}
 	pCurNode->acctNum = acctNum;

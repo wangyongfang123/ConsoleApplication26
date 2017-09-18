@@ -133,11 +133,14 @@ int main()
 						case '9':
 						{
 							SysTail();
+							system("pause");
 							flag = 0;
 							int Admin = 1;
 							int flag = 1;
 							while (flag)
 							{
+								system("cls");
+								SysTitle();
 								printf("\n");
 								printf("\t\t\t操作系统的人员是用户还是管理员(0\\1)？\n");
 								printf("\t\t\t        请输入数字进行选择\n");
@@ -235,10 +238,13 @@ int main()
 						break;
 						case '5':
 							SysTail();
+							system("pause");
 							flag = 0;
 							int flag = 1;
 							while (flag)
 							{
+								system("cls");
+								SysTitle();
 								printf("\n");
 								printf("\t\t\t操作系统的人员是用户还是管理员(0\\1)？\n");
 								printf("\t\t\t        请输入数字进行选择\n");
@@ -250,7 +256,6 @@ int main()
 									break;
 								}
 								printf("\t\t\t       输入错误，请重新输入\n");
-
 							}
 						}
 						if (choice < '0' || choice > '9')
