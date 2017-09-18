@@ -5,7 +5,6 @@
 #include<string.h>
 
 int FLAG_NODE = 0;
-
 int Login()//管理员账号密码登录
 {
 	char account_number[10];
@@ -37,7 +36,6 @@ int Login()//管理员账号密码登录
     void SysTitle();
 	return -1;
 }
-
 int _Login(NodePtr *ppNode)//用户账号密码登录
 {
 	char account_number[10];
@@ -79,7 +77,6 @@ int _Login(NodePtr *ppNode)//用户账号密码登录
 	    void SysTitle();
 		return -1;
 	}
-
 void processList(NodePtr list)//显示存入的内容
 {
 	//遍历单链表，输出数据
@@ -94,7 +91,6 @@ void processList(NodePtr list)//显示存入的内容
 	}
 	fputs("\n", stdout);
 }
-
 void SysTitle()//开始界面
 {
 	printf("\n \n"
@@ -106,7 +102,6 @@ void SysTitle()//开始界面
 	       "\t\t\t*                           *\n"
 	       "\t\t\t*****************************\n");
 }
-
 char AdminenterChoice (void)//管理员主菜单
 {
 	char  menuChoice[256];
@@ -132,17 +127,11 @@ char AdminenterChoice (void)//管理员主菜单
 	printf("\t\t\t\t\t\n");
 	printf("\t\t\t\t");
 	scanf("%s", &menuChoice);
-	/*for (; menuChoice == '\n';)
-	{
-		menuChoice = getchar();
-	}*/
 	if (menuChoice[0]> '0' && menuChoice[0] < '9'&&strlen(menuChoice)==1)
 	{
 		return menuChoice[0];
-	}
-	
+	}	
 }
-
 char UserenterChoice(void)//用户主菜单
 {
 	char menuChoice[256];
@@ -155,9 +144,8 @@ char UserenterChoice(void)//用户主菜单
 	       "\t\t\t*      1.查找用户信息       *\n"
 	       "\t\t\t*      2.修改用户信息       *\n"
 	       "\t\t\t*      3.保存用户信息       *\n"
-	       "\t\t\t*      4.显示用户信息       *\n"
-	       "\t\t\t*      5.注册用户信息       *\n"
-	       "\t\t\t*      6.退出系统           *\n"
+	       "\t\t\t*      4.注册用户信息       *\n"
+	       "\t\t\t*      5.退出系统           *\n"
 		   "\t\t\t*                           *\n"
 		   "\t\t\t*****************************\n"
 		   "\t\t\t                             \n"
@@ -169,7 +157,6 @@ char UserenterChoice(void)//用户主菜单
 		return menuChoice[0];
 	}
 }
-
 void SysTail()//结束界面
 {
 	//system("cls");

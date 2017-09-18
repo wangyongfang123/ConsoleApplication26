@@ -59,13 +59,11 @@ int  Setting(NodePtr *ppNode, const char*password)//注册账户和密码
 			strcpy(pCurNode->account_number, name);
 			strcpy(pCurNode->password, password);
 		}
-
 	}
 	else
 	{
 		return -1;
 	}
-
 }
 int insertData(NodePtr *ppNode, const char* name, const char* address, int  acctNum, long int number, double balance)
 {
@@ -100,7 +98,6 @@ int insertData(NodePtr *ppNode, const char* name, const char* address, int  acct
 	strcpy(pCurNode->address, address);
 	pCurNode->balance = balance;
 	return 0;
-
 }
 int deleteData(NodePtr *ppNode, const char* data)//删除用户信息
 {
@@ -127,7 +124,6 @@ int deleteData(NodePtr *ppNode, const char* data)//删除用户信息
 			printf("\t\t\t删除成功\n");
 			return 0;
 		}
-
 		preNode = pNode;
 		pNode = pNode->next;
 	}
@@ -176,10 +172,8 @@ NodePtr findData(NodePtr *list, const char* name)//查找用户信息
 		{
 			return plist;
 		}
-
 		plist = plist->next;
 	}
-
 	return 0;
 }
 void printNodeInfo(const NodePtr pNode)//显示用户信息
@@ -190,7 +184,6 @@ void printNodeInfo(const NodePtr pNode)//显示用户信息
 		fputs("\t\t请输入** 客户编号**姓名**地址**手机号码**余额:\n", stdout);
 		printf("\t\t%d\t%s\t%s\t%ld\t%lf\n", pNode->acctNum, pNode->name, pNode->address, pNode->number, pNode->balance);
 	}
-
 }
 void Modify(NodePtr fptr)//修改用户信息
 {
@@ -253,7 +246,6 @@ void  readFile(NodePtr* list)
 		insertData(list, curnode->name, curnode->address, curnode->acctNum, curnode->number, curnode->balance);
 		i++;
 	}
-
 	fclose(readPtr);
 }
 

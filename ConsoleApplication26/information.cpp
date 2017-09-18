@@ -45,11 +45,9 @@ int main()
 			break;
 		}
 		printf("\t\t\t       输入错误，请重新输入\n");
-
 	}
 	while (choose != 2)
 	{
-
 		if (choose == Admin)
 		{
 			if (Login() == 1)//管理员账号密码登录
@@ -151,7 +149,6 @@ int main()
 									break;
 								}
 								printf("\t\t\t       输入错误，请重新输入\n");
-
 							}
 						}
 						}
@@ -208,7 +205,6 @@ int main()
 							if (pNode = findData(&header, name))
 							{
 								printNodeInfo(pNode);
-
 							}
 							else
 							{
@@ -222,7 +218,6 @@ int main()
 						{
 							Modify(header);
 							system("pause");
-
 						}
 						break;
 						case '3':
@@ -231,21 +226,14 @@ int main()
 							system("pause");
 						}
 						break;
+				
 						case '4':
-						{
-							fputs("\t\t\t用户信息的内容为:\n", stdout);
-							fputs("\t\t\t客户编号*姓名*地址*手机号码*余额\n", stdout);
-							processList(header);
-							system("pause");
-						}
-						break;
-						case '5':
 						{
 							Setting(&header, password);
 							system("pause");
 						}
 						break;
-						case '6':
+						case '5':
 							SysTail();
 							flag = 0;
 							int flag = 1;
@@ -273,7 +261,6 @@ int main()
 					}
 				}
 				fclose(cfPtr);
-
 			}
 			else
 			{
@@ -296,7 +283,6 @@ int main()
 				}
 			}
 		}
-
 	}
 
 	return 0;
